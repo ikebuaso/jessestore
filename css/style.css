@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+}
+
+.nav {
+  display: flex;
+  gap: 50px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: gray;
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+  transition: color 0.3s ease, border-bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* Added color transition for smoother text color changes */
+}
+
+.nav a:hover {
+  color: orangered; /* Changes text color on hover */
+  border-bottom: 2px solid orangered;
+  padding: 3.5px;
+}
+
+.face {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cart img {
+  height: 75px;
+}
+
+.face img {
+  height: 50px;
+}
+
+.line {
+  border: 1px solid grey;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  margin-left: 35px;
+  padding: 35px;
+  gap: 70px;
+}
+
+.main-image img {
+  width: 500px;
+  height: 550px;
+  border-radius: 20px;
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.main-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.sub-image {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 60px;
+}
+
+.sub-image img {
+  width: 110px;
+  border-radius: 10px;
+  height: 110px;
+  margin: 6px;
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.sub-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.words {
+  padding: 45px;
+  margin-left: 25px;
+  margin-top: 75px;
+}
+
+h3 {
+  color: orangered;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+.props {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: grey;
+}
+
+.price {
+  display: inline-flex;
+  gap: 10px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+.discount {
+  color: rgb(224, 89, 39);
+  background-color: rgb(244, 204, 175);
+  padding: 2px;
+  margin-top: 22px;
+  border-radius: 2px;
+}
+
+.slash {
+  color: grey;
+  text-decoration: line-through;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input {
+  display: flex;
+  gap: 35px;
+}
+
+.counter input {
+  background-color: rgb(216, 216, 216);
+  width: 95px;
+  height: 55px;
+  border-radius: 20px;
+  text-align: center;
+  border: none; /* Removes default border */
+  transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+.counter input:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.main-but .sub-but {
+  background-color: chocolate;
+  border-radius: 11px;
+  height: 65px;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none; /* Removes default border */
+  color: white; /* Ensures text is visible */
+  cursor: pointer; /* Indicates the element is clickable */
+  transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+.main-but .sub-but:hover {
+  background-color: darkorange;
+}
+
+.ui {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  gap: 10px;
+}
+
+.movement {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  color: orangered;
+  padding: 3px;
+  margin: 4px;
+  animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    gap: 20px; /* Added gap between elements for better spacing */
+    padding: 10px; /* Added padding for better spacing */
+  }
+
+  .main-image img {
+    width: 100%; /* Ensures image scales with screen size */
+    height: auto;
+  }
+
+  .sub-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .words {
+    padding: 20px; /* Reduced padding for smaller screens */
+    margin-left: 0; /* Center align on smaller screens */
+    margin-top: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 20px; /* Increased gap for better spacing on smaller screens */
+  }
+
+  .nav a {
+    font-size: larger; /* Increased font size for better readability */
+  }
+}
